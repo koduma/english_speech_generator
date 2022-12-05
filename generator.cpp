@@ -216,6 +216,5 @@ int main(){
 	unordered_map<int, int>v2;
 	g_str2(cur,0,&v2,rrr,0);
 	cout<<"ex:"<<output<<endl;
-    
-return 0;
+	return 0;
 }
