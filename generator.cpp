@@ -141,7 +141,7 @@ int main(){
 	
 	string line;
 	vector<string> t_path;
-	ifstream myfile ("paper3.txt");
+	ifstream myfile ("paper.txt");
 	while(getline(myfile,line)){
 
 	t_path.push_back(line);
