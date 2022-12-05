@@ -1,5 +1,7 @@
 # english_speech_generator
 
+説明：(I,We,You,He,She,They)を入力すると、要約英作文を書くプログラムです。スピーチや論文がpaper.txtには最適です。
+
 ## Compiler:g++
 
 ## Compile Command
