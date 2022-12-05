@@ -138,18 +138,18 @@ return;
 }
 
 int main(){
-    string line;
-    vector<string> t_path;
-    ifstream myfile ("paper3.txt");
-
+	
+	string line;
+	vector<string> t_path;
+	ifstream myfile ("paper3.txt");
 	while(getline(myfile,line)){
 
 	t_path.push_back(line);
 
 	}
 	myfile.close();
-    
-    int counter=0;
+	
+	int counter=0;
 
 	for(int i=0;i<(int)t_path.size();i++){
 	
@@ -172,9 +172,9 @@ int main(){
         }
             
         }
-     }
-    
-    for(int i=0;i<(int)t_path.size();i++){
+	}
+	
+	for(int i=0;i<(int)t_path.size();i++){
 	
         bool space=false;
         string www="";
@@ -208,38 +208,14 @@ int main(){
         }
         
 	}
-    
-    string rrr;
-    
-    int cur;
-    
-    cin>>rrr;
-    
-    cur=word[rrr];
-    
-    //string generate_str(int cur,int depth,unordered_map<int, bool>*v,string str)
-    
-    /*
-    
-    for(int i=0;i<50;i++){
-    
-    unordered_map<int, int>v;
-    
-    generate_str(cur,0,&v,rrr+" ");
-        
-    if(!history[output]){
-    history[output]=true;
-    cout<<output+"."<<endl;        
-    }
-        
-    }
-    */
-    
-    unordered_map<int, int>v2;
-    
-    g_str2(cur,0,&v2,rrr,0);
-    
-    cout<<"ex:"<<output<<endl;
+	
+	string rrr;
+	int cur;
+	cin>>rrr;
+	cur=word[rrr];
+	unordered_map<int, int>v2;
+	g_str2(cur,0,&v2,rrr,0);
+	cout<<"ex:"<<output<<endl;
     
 return 0;
 }
