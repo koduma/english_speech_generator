@@ -196,15 +196,15 @@ int main(){
         }
         for(int r=0;r<(int)vec.size()-1;r++){    
         int cur=vec[r];
-		int nexthash=vec[r+1];
-		bool find=false;
-		auto p = words.equal_range(cur);
-		for (auto it = p.first; it != p.second; ++it) {
-		if(it->second==nexthash){find=true;break;}
-		}
-		if(!find){
-		words.emplace(cur,nexthash);
-		}
+	int nexthash=vec[r+1];
+	bool find=false;
+	auto p = words.equal_range(cur);
+	for (auto it = p.first; it != p.second; ++it) {
+	if(it->second==nexthash){find=true;break;}
+	}
+	if(!find){
+	words.emplace(cur,nexthash);
+	}
         }
         
 	}
