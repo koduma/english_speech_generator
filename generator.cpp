@@ -87,7 +87,14 @@ return;
 
 int max_ev=-1;
 
+int vvvv=0;
+
+int k=10;
+
 void g_str2(int cur,int depth,unordered_map<int, int>v,string str,int ev){
+if(depth>=15){return;}    
+vvvv++;
+if(vvvv%1000000==0){cout<<"max_ev="<<(max_ev)<<",output="<<output<<endl;}    
 if((v)[cur]>=rnd(1,1)){
     return;
 }
@@ -106,12 +113,7 @@ if(s==""){
     continue;
 }
 if(s=="."){
-    if(ev>=INT_MAX/2){
-    ev=INT_MAX;
-    }
-    else{
-    ev*=2;
-    }
+    ev+=10000;
     if(ev>max_ev){
         output=str+".";
         max_ev=ev;
@@ -119,12 +121,7 @@ if(s=="."){
     continue;
 }
 if(s[dot]=='.'){
-    if(ev>=INT_MAX/2){
-    ev=INT_MAX;
-    }
-    else{
-    ev*=2;
-    }
+    ev+=10000;
     if(ev>max_ev){
         output=str+" "+s;
         max_ev=ev;
@@ -141,7 +138,7 @@ int main(){
 	
 	string line;
 	vector<string> t_path;
-	ifstream myfile ("paper.txt");
+	ifstream myfile ("paper3.txt");
 	while(getline(myfile,line)){
 
 	t_path.push_back(line);
