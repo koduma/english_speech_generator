@@ -87,11 +87,11 @@ return;
 
 int max_ev=-1;
 
-void g_str2(int cur,int depth,unordered_map<int, int>*v,string str,int ev){
-if((*v)[cur]>=rnd(1,1)){
+void g_str2(int cur,int depth,unordered_map<int, int>v,string str,int ev){
+if((v)[cur]>=rnd(1,1)){
     return;
 }
-(*v)[cur]++;
+(v)[cur]++;
 auto p = words.equal_range(cur);
 int counter=0;
 for (auto it = p.first; it != p.second; ++it) {
@@ -214,7 +214,7 @@ int main(){
 	cin>>rrr;
 	cur=word[rrr];
 	unordered_map<int, int>v2;
-	g_str2(cur,0,&v2,rrr,0);
+	g_str2(cur,0,v2,rrr,0);
 	cout<<"ex:"<<output<<endl;
 	return 0;
 }
