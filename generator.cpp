@@ -264,12 +264,13 @@ int main(){
             
         }
 	}
+
+	vector<int>vec;
     	
 	for(int i=0;i<(int)t_path.size();i++){
 	
         bool space=false;
         string www="";
-        vector<int>vec;
             
         for(int j=0;j<(int)t_path[i].size();j++){
             
